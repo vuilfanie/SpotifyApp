@@ -2,6 +2,10 @@
 
 End product of the "Build a Spotify Connected App" newline course
 
+## Go here to view the Live Project
+
+https://spotifyappvf.onrender.com/
+
 ## Local Installation & Set Up
 
 1. Register a Spotify App in your [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/) and add `http://localhost:8888/callback` as a Redirect URI in the app settings
@@ -27,3 +31,32 @@ End product of the "Build a Spotify Connected App" newline course
     ```shell
     npm start
     ```
+       
+## Deploying to Render with Git
+
+1. Create a [Heroku](https://www.render.com/) app
+
+2. Add your render app as a git remote (https://render.com/docs/github)
+
+    ```shell
+    heroku git:remote -a your-app-name
+    ```
+
+3. Add `http://your-app-name.render.com/callback` as a Redirect URI in your Spotify app's settings
+
+4. In your app's **Environment** tab in the Render App dashboard, add [environmental variables] (https://render.com/docs/configure-environment-variables)
+
+   Based on the values in your `.env` file, the `CLIENT_ID`, `CLIENT_SECRET`, `REDIRECT_URI`, and `FRONTEND_URI` key value pairs. Make sure to replace the `localhost` URLs with your heroku app's URL.
+
+   ```env
+   REDIRECT_URI: http://your-app-name.render.com/callback
+   FRONTEND_URI: http://your-app-name.render.com
+   ```
+
+5. Push to render
+
+    ```shell
+    git push render main
+    ```
+    
+Alternatively connect Github to Render using the Web GUI (https://render.com/docs/github)    
