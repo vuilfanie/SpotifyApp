@@ -34,7 +34,7 @@ https://spotifyappvf.onrender.com/
        
 ## Deploying to Render with Git
 
-1. Create a [Heroku](https://www.render.com/) app
+1. Create a [Render](https://www.render.com/) app
 
 2. Add your render app as a git remote (https://render.com/docs/github)
 
